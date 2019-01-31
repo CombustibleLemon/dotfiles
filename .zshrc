@@ -237,4 +237,4 @@ POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON='\u2191'
 # Directory aliases
 alias win="cd /mnt/c/Users/danie_000"
 alias github="cd /mnt/c/Users/danie_000/Documents/GitHub"
-alias config='/usr/bin/git --git-dir=$HOME/.config/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles-config/ --work-tree=$HOME'
