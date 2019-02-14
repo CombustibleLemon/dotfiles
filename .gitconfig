@@ -1,0 +1,14 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[gpg]
+	program = gpg.exe
+[user]
+	name = Dan Leonard
+	email = daniel@danleonard.us
+	signingkey = EC2323C5
+[commit]
+	gpgsign = true
+
