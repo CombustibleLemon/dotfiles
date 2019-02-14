@@ -63,12 +63,23 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  ssh-agent
+  archlinux
   colored-man-pages
+  command-not-found
+  common-aliases
   cp
+  debian
+  dirhistory
+  extract
+  git
+  github
   rand-quote
+  ssh-agent
+  suse
   zsh-256color
+  systemd
+  vscode
+  web-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -129,7 +140,7 @@ prompt_dir() {
   # Except if current directory is longer than one character
   local currentDirectory=$PWD
   local modifiedDirectory=$currentDirectory
-  
+
   # Check if looking at C: drive
   if [[ $modifiedDirectory = /mnt/c* ]]
   then
@@ -236,5 +247,5 @@ POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON='\u2191'
 
 # Directory aliases
 alias win="cd /mnt/c/Users/danie_000"
-alias github="cd /mnt/c/Users/danie_000/Documents/GitHub"
+alias gh="cd /mnt/c/Users/danie_000/Documents/GitHub"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles-config/ --work-tree=$HOME'
