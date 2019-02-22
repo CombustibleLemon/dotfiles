@@ -1,0 +1,14 @@
+#!/usr/bin/zsh
+
+# Theme
+ZSH_THEME=""
+
+# Custom plugins
+plugins+=(
+  suse
+  vscode
+)
+
+# Device-specific aliases
+alias win="cd /mnt/c/Users/danie_000"
+alias gh="cd /mnt/c/Users/danie_000/Documents/GitHub"

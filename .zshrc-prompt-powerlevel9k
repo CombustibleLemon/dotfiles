@@ -1,0 +1,94 @@
+#!/usr/bin/zsh
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# Prompt_dir for PowerLevel9K
+prompt_dir() {
+  # Never omit first character
+  POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=false
+  # Except if current directory is longer than one character
+  local currentDirectory=$PWD
+  local modifiedDirectory=$currentDirectory
+
+  # Check if looking at C: drive
+  if [[ $modifiedDirectory = /mnt/c* ]]
+  then
+    # Replace /mnt/c with Windows logo
+    modifiedDirectory=${modifiedDirectory/\/mnt\/c/}
+    POWERLEVEL9K_FOLDER_ICON=$'\uE62A'
+  else
+    POWERLEVEL9K_FOLDER_ICON=""
+  fi
+
+  # Check if in Windows User folder
+  if [[ $modifiedDirectory = /Users/danie_000* ]]
+  then
+    # Replace Users/danie_000 with home symbol
+    modifiedDirectory=${modifiedDirectory/Users\/danie_000/$'\uF015'}
+  fi
+
+  # Check if in GitHub folder
+  if [[ $modifiedDirectory = /$'\uF015'/Documents/GitHub* ]]
+  then
+    # Replace Users/danie_000 with home symbol
+    modifiedDirectory=${modifiedDirectory/Documents\/GitHub/$'\uF408'}
+  fi
+
+  # Call original prompt_dir function
+  export PWD=$modifiedDirectory
+  _prompt_dir "${1}" "${2}"
+  export PWD=$currentDirectory
+}
+
+# PowerLevel9K Settings
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+  user
+  background_jobs
+  context
+  dir
+  dir_writable
+  vcs
+)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+  status
+)
+DEFAULT_USER='dan'
+
+# PowerLevel9K Separators
+# POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$'\uE0C0'
+# POWERLEVEL9K_ALWAYS_SHOW_USER=true
+POWERLEVEL9K_HOME_ICON=$'\uF015'
+POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND="fuscia"
+POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND="green"
+POWERLEVEL9K_CONTEXT_REMOTE_FOREGROUND="lime"
+POWERLEVEL9K_CONTEXT_REMOTE_BACKGROUND="black"
+POWERLEVEL9K_CONTEXT_SUDO_FOREGROUND="grey"
+POWERLEVEL9K_CONTEXT_SUDO_BACKGROUND="purple"
+POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND="grey"
+POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND="purple"
+POWERLEVEL9K__PROMPT_DIR_HOME_FOREGROUND="black"
+POWERLEVEL9K__PROMPT_DIR_HOME_BACKGROUND="teal"
+POWERLEVEL9K__PROMPT_DIR_HOME_SUBFOLDER_FOREGROUND=$gruv_dark_foreground
+POWERLEVEL9K__PROMPT_DIR_HOME_SUBFOLDER_BACKGROUND="blue"
+POWERLEVEL9K__PROMPT_DIR_DEFAULT_FOREGROUND=$gruv_dark_foreground
+POWERLEVEL9K__PROMPT_DIR_DEFAULT_BACKGROUND="blue"
+POWERLEVEL9K__PROMPT_DIR_ETC_FOREGROUND="black"
+POWERLEVEL9K__PROMPT_DIR_ETC_BACKGROUND="aqua"
+POWERLEVEL9K__PROMPT_DIR_WRITABLE_FORBIDDEN_FOREGROUND="maroon"
+POWERLEVEL9K__PROMPT_DIR_WRITABLE_FORBIDDEN_BACKGROUND="yellow"
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_HOME_SUB_ICON="$(print_icon "HOME_ICON")"
+POWERLEVEL9K_DIR_PATH_SEPARATOR=" $(print_icon "LEFT_SUBSEGMENT_SEPARATOR") "
+POWERLEVEL9K_VCS_CLEAN_FOREGROUND="black"
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND="lime"
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND="black"
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=$gruv_dark_orange_l
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND="black"
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=$gruv_dark_orange_l
+POWERLEVEL9K_VCS_STAGED_ICON='\u00b1'
+POWERLEVEL9K_VCS_UNTRACKED_ICON='\u25CF'
+POWERLEVEL9K_VCS_UNSTAGED_ICON='\u00b1'
+POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON='\u2193'
+POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON='\u2191'
+
