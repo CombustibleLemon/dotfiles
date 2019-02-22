@@ -1,4 +1,4 @@
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#!/usr/bin/zsh
 
 source $HOME/.zshrc-options-oh-my-zsh
 
