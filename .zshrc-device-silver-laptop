@@ -1,7 +1,8 @@
-#!/usr/bin/zsh
-
 # Theme
-ZSH_THEME=""
+ZSH_THEME="simple-color"
+
+# Prompt
+# source $HOME/.zshrc-prompt-simple-color
 
 # Custom plugins
 plugins+=(

@@ -2,6 +2,9 @@
 
 source $HOME/.zshrc-options-oh-my-zsh
 
+# Use device-specific .zshrc
+source $HOME/.zshrc-device-$(hostname | awk '{print tolower($0)}')
+
 # Activate oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
