@@ -70,6 +70,7 @@ plugins=(
   zsh-256color
   systemd
   web-search
+  zsh-autosuggestions
 )
 
 # User configuration
