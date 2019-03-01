@@ -8,6 +8,9 @@ source $HOME/.zshrc-device-$(hostname | awk '{print tolower($0)}')
 # Activate oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+# Allow logging into gpg
+export GPG_TTY=$(tty)
+
 # LS colors
 eval `dircolors --sh ~/dnld-software/dircolors-solarized/dircolors.ansi-dark`
 
