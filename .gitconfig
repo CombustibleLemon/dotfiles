@@ -27,4 +27,4 @@
 [log]
         date = short
 [gpg]
-	program = gpg.exe
+	program = gpg
