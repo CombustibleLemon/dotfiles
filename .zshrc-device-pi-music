@@ -1,0 +1,13 @@
+# Theme
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# Prompt
+# source $HOME/.zshrc-prompt-simple-color
+
+# Custom plugins
+plugins+=(
+  debian
+)
+
+# Device-specific aliases
+
