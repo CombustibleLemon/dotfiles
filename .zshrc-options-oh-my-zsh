@@ -69,7 +69,6 @@ plugins=(
   ssh-agent
   zsh-256color
   systemd
-  web-search
   zsh-autosuggestions
 )
 
