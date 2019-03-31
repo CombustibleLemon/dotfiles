@@ -8,6 +8,10 @@ source $HOME/.zshrc-device-$(hostname | awk '{print tolower($0)}')
 # Activate oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+# Get theme settings
+ZSH_THEME_SETTINGS=$HOME/.zshrc-prompt-${ZSH_THEME##*/}
+[[ -r $ZSH_THEME_SETTINGS ]] && source $ZSH_THEME_SETTINGS
+
 # Allow logging into gpg
 export GPG_TTY=$(tty)
 

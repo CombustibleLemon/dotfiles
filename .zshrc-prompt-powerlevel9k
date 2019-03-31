@@ -1,6 +1,9 @@
 #!/usr/bin/zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
+# Back up prompt_dir
+eval "`declare -f prompt_dir | sed '1s/.*/_&/'`"
+
 # Prompt_dir for PowerLevel9K
 prompt_dir() {
   # Never omit first character

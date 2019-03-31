@@ -1,6 +1,5 @@
 # Theme
 ZSH_THEME="powerlevel9k/powerlevel9k"
-#source $HOME/.zshrc-prompt-powerlevel9k
 
 # Prompt
 # source $HOME/.zshrc-prompt-simple-color
