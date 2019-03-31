@@ -12,7 +12,6 @@ source $ZSH/oh-my-zsh.sh
 export GPG_TTY=$(tty)
 
 # LS colors
-eval `dircolors --sh ~/dnld-software/dircolors-solarized/dircolors.ansi-dark`
 
 # local sol_dark_base03='234'
 # local sol_dark_base02='235'
