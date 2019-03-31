@@ -72,7 +72,6 @@ plugins=(
   ssh-agent
   zsh-256color
   systemd
-  zsh-autosuggestions
 )
 
 # User configuration
