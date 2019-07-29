@@ -56,3 +56,4 @@ local gruv_dark_orange_l='208'
 
 # Directory aliases
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles-config/ --work-tree=$HOME'
+PROMPT="%{$(tput bold)%}%{$(tput setaf 1)%}[%{$(tput setaf 3)%}%n%{$(tput setaf 2)%}@%{$(tput setaf 4)%}%m %{$(tput setaf 5)%}%~%{$(tput setaf 1)%}]${ret_status}%{$(tput setaf 7)%}$ %{$(tput sgr0)%}"

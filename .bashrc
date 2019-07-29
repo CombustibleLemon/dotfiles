@@ -17,3 +17,4 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles-config/ --work-tree=$HOME'
 
 # grep history
 alias hgrep="fc -El 0 | grep"
+
