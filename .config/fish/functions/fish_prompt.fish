@@ -1,0 +1,1 @@
+/home/dan/.local/share/omf/themes/ansilambda/fish_prompt.fish
